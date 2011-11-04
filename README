@@ -1,9 +1,8 @@
-Precompiled Razor Views
+This is fork of tqc/RazorEngine project. We have also merged code from Antaris/RazorEngine. 
 
-This project contains tools and base classes for using Razor views in scenarios where standard ASP.NET MVC 3 is not an option.
+The purpose of this fork:
 
- * Use cshtml to generate view code that can run without .NET 4.0
- * Use standard Razor views without a dependency on the server having a working Razor BuildProvider
- * Compile shared views into a seperate assembly
- * Use Razor views and MVC concepts to build SharePoint web parts
+- Generate C# from cshtml-files (GenerateViewCode).
+- Run generated files with .NET 3.5 (RazorEngine.Run).
 
+Our company web site: http://www.brinkhill.com
