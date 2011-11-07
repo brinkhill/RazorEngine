@@ -8,30 +8,41 @@
     public class RazorEngineConfigurationSection : ConfigurationSection
     {
         #region Fields
-        private const string NamespacesElement = "namespaces";
+        private const string ActivatorAttribute = "activator";
+        private const string DefaultLanguageAttribute = "defaultLanguage";
+        private const string FactoryAttribute = "factory";
         private const string SectionPath = "razorEngine";
-        private const string TemplateServicesElement = "templateServices";
         #endregion
 
         #region Properties
         /// <summary>
-        /// Gets or sets the collection of namespaces.
+        /// Gets or sets the activator type.
         /// </summary>
-        [ConfigurationProperty(NamespacesElement)]
-        public NamespaceConfigurationElementConfiguration Namespaces
+        [ConfigurationProperty(ActivatorAttribute, IsRequired = false)]
+        public string ActivatorType
         {
-            get { return (NamespaceConfigurationElementConfiguration)this[NamespacesElement]; }
-            set { this[NamespacesElement] = value; }
+            get { return (string)this[ActivatorAttribute]; }
+            set { this[ActivatorAttribute] = value; }
         }
 
         /// <summary>
-        /// Gets or sets the collection of template service configurations.
+        /// Gets or sets the default language.
         /// </summary>
-        [ConfigurationProperty(TemplateServicesElement)]
-        public TemplateServiceConfigurationElementConfiguration TemplateServices
+        [ConfigurationProperty(DefaultLanguageAttribute, DefaultValue = Language.CSharp, IsRequired = false)]
+        public Language DefaultLanguage
         {
-            get { return (TemplateServiceConfigurationElementConfiguration)this[TemplateServicesElement]; }
-            set { this[TemplateServicesElement] = value; }
+            get { return (Language)this[DefaultLanguageAttribute]; }
+            set { this[DefaultLanguageAttribute] = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the factory type.
+        /// </summary>
+        [ConfigurationProperty(FactoryAttribute, IsRequired = false)]
+        public string FactoryType
+        {
+            get { return (string)this[FactoryAttribute]; }
+            set { this[FactoryAttribute] = value; }
         }
         #endregion
 

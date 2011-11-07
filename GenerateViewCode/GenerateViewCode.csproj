@@ -52,17 +52,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RazorEngine.Core\RazorEngine.Core.csproj">
-      <Project>{5BCCBCC3-F383-448E-860F-DCA11AFFC74F}</Project>
-      <Name>RazorEngine.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RazorEngine.Templates\RazorEngine.Templates.csproj">
-      <Project>{627E40EE-0A5E-4787-B92F-57B74A683E2D}</Project>
-      <Name>RazorEngine.Templates</Name>
-    </ProjectReference>
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <ProjectReference Include="..\RazorEngine.Core\RazorEngine.Core.csproj">
+      <Project>{D268F86D-2DAB-4329-A75F-3BCF6D5BCDC4}</Project>
+      <Name>RazorEngine.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

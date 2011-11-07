@@ -8,7 +8,7 @@
     {
         #region Properties
         /// <summary>
-        /// Gets or sets the model.
+        /// Gets the or sets the model.
         /// </summary>
         T Model { get; set; }
         #endregion
