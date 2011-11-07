@@ -1,7 +1,7 @@
 ﻿namespace RazorEngine.Templating
 {
     using System;
-     using System.Linq;
+    using System.Linq;
     using System.Reflection;
 
 
@@ -41,11 +41,11 @@
             get { return (T)model; }
             set
             {
-                                 model = value;
+                model = value;
             }
         }
         #endregion
 
-      
+
     }
 }

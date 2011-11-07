@@ -7,32 +7,34 @@
     {
         #region Properties
         /// <summary>
-        /// Gets the result of the template.
+        /// Sets the template service.
         /// </summary>
-        string Result { get; }
+        ITemplateService TemplateService { set; }
         #endregion
 
         #region Methods
         /// <summary>
-        /// Clears the template.
-        /// </summary>
-        void Clear();
-
-        /// <summary>
         /// Executes the compiled template.
         /// </summary>
         void Execute();
-        
-        /// <summary>
-        /// Writes the specified object to the template result.
-        /// </summary>
-        /// <param name="obj">The object to write to the template result.</param>
-        void Write(object obj);
 
         /// <summary>
-        /// Writes the specified literal to the template result.
+        /// Runs the template and returns the result.
         /// </summary>
-        /// <param name="literal">The literal to write to the template result.</param>
+        /// <param name="context">The current execution context.</param>
+        /// <returns>The merged result of the template.</returns>
+        string Run(ExecuteContext context);
+
+        /// <summary>
+        /// Writes the specified object to the result.
+        /// </summary>
+        /// <param name="value">The value to write.</param>
+        void Write(object value);
+
+        /// <summary>
+        /// Writes the specified string to the result.
+        /// </summary>
+        /// <param name="literal">The literal to write.</param>
         void WriteLiteral(string literal);
         #endregion
     }
